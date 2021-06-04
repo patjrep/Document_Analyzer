@@ -8,9 +8,10 @@ def processor():
     parsed_files = Modules.FileParser()
     files = Modules.FileReader()
     counted_words = Modules.WordCounter(parsed_files)
+    interesting_words = Modules.InterestingWords(counted_words)
     print(parsed_files)
     for file in reader.get_files():
-        # print(file)
+        print(file)
         for line in files.read_file(file):
             # print(line)
             for sentence in parsed_files.split_to_sentences(line):
