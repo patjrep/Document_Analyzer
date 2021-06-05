@@ -9,14 +9,15 @@ def processor():
     files = Modules.FileReader()
     counted_words = Modules.WordCounter(parsed_files)
     interesting_words = Modules.InterestingWords(counted_words)
-    print(parsed_files)
+
     for file in reader.get_files():
-        print(file)
+        print("Procesing:", file)
         for line in files.read_file(file):
             # print(line)
             for sentence in parsed_files.split_to_sentences(line):
                 counted_words.word_counter_processor(sentence, file)
-    print(counted_words.get_word_count())
+    # print(counted_words.get_word_count())
+    print(interesting_words.getInterestingWords(counted_words))
 
 
 def main():
