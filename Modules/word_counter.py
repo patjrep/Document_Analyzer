@@ -16,7 +16,7 @@ class WordCounter:
 
             if find_word is not None:
                 find_word["Frequency"] += 1
-                find_word["Sentence"].append(sentence)
+                # find_word["Sentence"].append(sentence)
                 if document_name not in find_word["Document"]:
                     find_word["Document"].append(document_name)
 
@@ -42,7 +42,7 @@ class WordCounter:
         # print(keywords)
         for kw in keywords:
             self.keyword_weights.append(kw)
-        print(self.keyword_weights)
+        # print(self.keyword_weights)
 
     def get_word_count(self):
         return self.word_count

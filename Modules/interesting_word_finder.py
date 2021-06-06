@@ -11,7 +11,7 @@ class InterestingWords:
         # print(max_freq[0], max_freq[1], max_freq[2])
 
         self.interesting_words.append(word_dictionary_counts)
-        print(self.interesting_words)
+        # print(self.interesting_words)
 
     def mostInterestingWords(self):
         return self.interesting_words
