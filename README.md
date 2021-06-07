@@ -41,3 +41,4 @@ The 'word_counter.py' module has two different methods inside:
 
 Improvements include:
     1) Much better flask site (enhanced funtionality, colapsable columns, user accesibility options, etc.)
+    2) Testing for the project (e.g. unittest)
