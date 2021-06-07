@@ -9,13 +9,14 @@ ret = p.mainProcessor()
 keyword_var = p.keywordWeightGrabber()
 
 
-@app.route('/contact', methods=['GET', 'POST'])
-def contact():
-    print(keyword_var)
-    # if request.method == 'POST':
-    #     keyword_var = request.form.get('msg')
-    return render_template("index.html", output=ret, keyword=keyword_var)
-    # return msg
+# @app.route('/contact', methods=['GET', 'POST'])
+# def contact():
+#     # print(keyword_var)
+#     if request.method == 'POST':
+#         print('poopy')
+#         keyword_var = request.form.get('msg')
+#     return render_template("index.html", output=ret, keyword=keyword_var)
+#     # return msg
 
 
 @app.route("/")

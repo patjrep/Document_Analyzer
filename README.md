@@ -19,7 +19,11 @@ pip install Flask
 ```bash
 pip install yake
 ```
+Or to install all files:
 
+```bash
+$pip install -r requirements.txt
+```
 
 ## How It Works
 
@@ -42,6 +46,6 @@ The 'word_counter.py' module has two different methods inside:
 
 Improvements include:
 
-    1) Much better flask site (enhanced funtionality, colapsable columns, user accesibility options, etc.)
+    1) Much better flask site (enhanced funtionality, changeable variable on frontend, colapsable columns, user accesibility options, etc.)
 
     2) Testing for the project (e.g. unittest)

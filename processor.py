@@ -26,15 +26,15 @@ def mainProcessor():
     return mapped_interesting_words
 
 
-def keywordWeightGrabber():
-    reader = Modules.FileDiscovery(config.DIRECTORIES)
-    files = Modules.FileReader()
-    parsed_files = Modules.FileParser()
-    lines = Modules.LineReader()
-    weight_grabber = Modules.WordCounter(parsed_files)
-    kww = weight_grabber.keyword_variable
-    return kww
+# def keywordWeightGrabber():
+#     reader = Modules.FileDiscovery(config.DIRECTORIES)
+#     files = Modules.FileReader()
+#     parsed_files = Modules.FileParser()
+#     lines = Modules.LineReader()
+#     weight_grabber = Modules.WordCounter(parsed_files)
+#     kww = weight_grabber.keyword_variable
+#     return kww
 
 
-# if __name__ == "__main__":
-#     keywordWeightGrabber()
+# # if __name__ == "__main__":
+# #     keywordWeightGrabber()
