@@ -7,6 +7,7 @@ class WordCounter:
         self.word_count = []
         self.file_parser = file_parser
         self.keyword_weights = []
+        self.keyword_variable = 0
 
     def word_counter_processor(self, sentence, document_name):
         individual_words = self.file_parser.split_to_words(sentence)
@@ -42,12 +43,14 @@ class WordCounter:
         deduplication_threshold = 0.1
         # Change for more or less keywords
         numOfKeywords = 1
+        self.keyword_variable = numOfKeywords
         custom_kw_extractor = yake.KeywordExtractor(
             lan=language, n=max_ngram_size, dedupLim=deduplication_threshold, top=numOfKeywords, features=None)
         keywords = custom_kw_extractor.extract_keywords(line)
 
         for kw in keywords:
             self.keyword_weights.append(kw)
+        return self.keyword_variable
 
     def get_word_count(self):
         return self.word_count
