@@ -30,6 +30,7 @@ Once read, 'file_parser.py' parses the files, breaking it down into two usable f
 You'll also notice that there are two types of reader Modules, one which reads the indiivdual lines, and one that reads the entire document. This distinction in necessary for the way the program handles the files.
 
 The 'word_counter.py' module has two different methods inside:
+
     1) word_weighter() takes the entire read file from 'file_reader.py' and uses a NLP library called YAKE to process the text corpus. This then weights the words and provides a keyword ranking to each (the lower the value the more "important" the word is).
     There values are changeable withing the method including the abiilty to chosse the amount of keywords, duplication allowance threshold, etc.
 
@@ -41,4 +42,5 @@ The 'word_counter.py' module has two different methods inside:
 
 Improvements include:
     1) Much better flask site (enhanced funtionality, colapsable columns, user accesibility options, etc.)
+    
     2) Testing for the project (e.g. unittest)
