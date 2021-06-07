@@ -1,4 +1,5 @@
 import yake
+import json
 
 
 class WordCounter:
@@ -9,6 +10,7 @@ class WordCounter:
 
     def word_counter_processor(self, sentence, document_name):
         individual_words = self.file_parser.split_to_words(sentence)
+        break_line = "<br/>"
 
         for word in individual_words:
             find_word = next(
@@ -16,9 +18,11 @@ class WordCounter:
 
             if find_word is not None:
                 find_word["Frequency"] += 1
-                # find_word["Sentence"].append(sentence)
+                find_word["Sentence"].append(sentence)
+                # print(sentence)
                 if document_name not in find_word["Document"]:
                     find_word["Document"].append(document_name)
+                    # print(self.word_count)
 
             else:
                 if any(word in i for i in self.keyword_weights):
@@ -35,7 +39,7 @@ class WordCounter:
         language = "en"
         max_ngram_size = 1
         deduplication_threshold = 0.5
-        numOfKeywords = 1
+        numOfKeywords = 5
         custom_kw_extractor = yake.KeywordExtractor(
             lan=language, n=max_ngram_size, dedupLim=deduplication_threshold, top=numOfKeywords, features=None)
         keywords = custom_kw_extractor.extract_keywords(line)

@@ -1,7 +1,7 @@
 import Modules
 import config
 import processor
-from flask import Flask, render_template
+from flask import Flask, render_template, Markup
 
 app = Flask(__name__)
 p = processor
