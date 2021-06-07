@@ -4,11 +4,10 @@ import config
 
 def mainProcessor():
     reader = Modules.FileDiscovery(config.DIRECTORIES)
-    parsed_files = Modules.FileParser()
     files = Modules.FileReader()
+    parsed_files = Modules.FileParser()
     lines = Modules.LineReader()
     counted_words = Modules.WordCounter(parsed_files)
-    interesting_words = Modules.InterestingWords(counted_words)
 
     for file in reader.get_files():
         print("Procesing:", file)
@@ -22,10 +21,6 @@ def mainProcessor():
             for sentence in parsed_files.split_to_sentences(line):
                 counted_words.word_counter_processor(sentence, file)
 
-    # interesting_words.getInterestingWords(counted_words)
-    # mapped_interesting_words = interesting_words.mostInterestingWords()
-
     counted_words.get_word_count()
     mapped_interesting_words = counted_words.get_word_count()
-    # print(mapped_interesting_words)
     return mapped_interesting_words
